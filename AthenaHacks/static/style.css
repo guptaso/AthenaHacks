@@ -1,5 +1,5 @@
 .container {
-    margin-top: 100px;
+    margin-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 80px;
@@ -11,7 +11,7 @@
 
 .jumbotron {
     background: url('https://cdn.discordapp.com/attachments/906310571450855505/944728517466259476/zoom_background.jpg');
-    
+    height: 200px;
     background-attachment: fixed;
     background-position: center;
     background-position-x: -250px;
@@ -23,6 +23,14 @@ h1 {
     text-align: center;
     font-weight: bold;
     text-shadow: 4px 4px 4px #aaa
+}
+
+.yoga_style{
+    height: 300px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
 }
 
 body {

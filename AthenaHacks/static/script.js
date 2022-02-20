@@ -9,6 +9,8 @@ var homeLink = "https://ah2022.uw.r.appspot.com/";
 
 //main countdown timer function
 function updateCount() {
+    var yoga = document.getElementById('yoga');
+        yoga.style.display="none";
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
     if (seconds < 10) {
@@ -90,6 +92,17 @@ async function sendAlert() {
         mode: 'cors',
     });
     let d = await response.text();
+    var urlRegex = /(https?:\/\/[^ ]*)/;
+    var input = d;
 
+    var yoga = document.getElementById('yoga');
+        yoga.setAttribute("class", "yoga_style");
+        yoga.style.display="block";
+    var url = input.match(urlRegex)[1];
+    var img = document.createElement("img");
+    img.src= url;
+    console.log(img);
+    yoga.appendChild(img);
     alert(d)
 }
+
