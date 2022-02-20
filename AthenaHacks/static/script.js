@@ -17,9 +17,16 @@ function updateCount() {
 
 //function for start button
 function startTimer() {
-    var input1 = min.options[min.selectedIndex].value;
-    time = input1 * 60;
-    secTimer = setInterval(updateCount, 1000);
+  if (document.getElementById("sms").checked) {
+    if (document.getElementById("phone").value.length < 2 ) {
+      alert("Enter a phone number")
+    }
+    else {
+      var input1 = min.options[min.selectedIndex].value;
+      time = input1 * 60;
+      secTimer = setInterval(updateCount, 1000);
+    }
+  }
 }
 
 //function for reset button

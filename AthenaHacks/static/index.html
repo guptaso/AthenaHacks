@@ -33,6 +33,36 @@
 
         </div>
 
+        <div class="row justify-content-center" style="margin-top: 20px; margin-bottom: 10px">
+          <span>
+            <div class="col" id="radio-buttons">
+              <input type="radio" id="alert" name="web_notification" value="web_alert" checked onclick="web_check()">
+                <script>
+                  function web_check(){
+                    document.getElementById("alert").checked = true;
+                    document.getElementById("sms").checked = false;
+                    document.getElementById("phone").style.display = "none";
+                    document.getElementById("phone_label").style.display = "none";
+                  }
+                </script>
+              <label for="alert" style="margin-right: 30px;">
+                Web Alert </label>
+              <input type="radio" id="sms" name="sms_notification" value="sms" onclick="sms_check()">
+              <script>
+                function sms_check(){
+                  document.getElementById("alert").checked = false;
+                  document.getElementById("sms").checked = true;
+                  document.getElementById("phone").style.display = "inline";
+                  document.getElementById("phone_label").style.display = "inline";
+                }
+              </script>
+              <label for="alert" style="margin-right: 30px;">Text Alert </label>
+              <label for="phone" style="display: none;" id="phone_label"> Phone Number </label>
+              <input type="text" id="phone" style="display: none;">
+            </div>
+          </span>
+        </div>
+
         <div class="row justify-content-center">
             <div class="col" id="buttons">
                 <button class="btn" id="start" onclick='startTimer()'>Start</button>

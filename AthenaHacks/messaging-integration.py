@@ -28,4 +28,4 @@ if __name__ == "__main__":
     number = '+1##########'
     '''
 
-    sendMsg(yoga_pose, number)
+    sendMsg(args.yoga_pose, args.number)
