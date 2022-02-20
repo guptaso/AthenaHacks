@@ -12,5 +12,17 @@ async function sendSMS(){
     mode: 'cors',
   });
   let d = await response.text();
-  
+
+}
+
+async function sendAlert(){
+  var link = homeLink + '/sendalert'
+
+  const response = await fetch(link, {
+    method: 'GET',
+    mode: 'cors',
+  });
+  let d = await response.text();
+
+  alert(d)
 }

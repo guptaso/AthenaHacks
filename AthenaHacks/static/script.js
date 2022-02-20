@@ -45,5 +45,7 @@ function reset() {
 function sendMsg(){
   if (document.getElementById("sms").checked){
     sendSMS();
+  } else {
+    sendAlert();
   }
 }

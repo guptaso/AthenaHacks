@@ -32,6 +32,10 @@ def sendsms():
     )
     return message.sid
 
+@app.route('/sendalert', methods=['GET'])
+def sendalert():
+    return retrieveYogaPose()
+
 def retrieveYogaPose():
     yoga_poses_url = 'https://lightning-yoga-api.herokuapp.com/yoga_poses'
     with urllib.request.urlopen(yoga_poses_url) as url:
