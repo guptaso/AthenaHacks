@@ -46,7 +46,7 @@ def retrieveYogaPose():
 
     data = data[pose_number]
 
-    msg = data['english_name'] + ' (' + data['sanskrit_name'] + ')\n'
+    msg = 'Try this Yoga pose for 5 minutes: '+ data['english_name'] + ' (' + data['sanskrit_name'] + ')\n'
     msg += "Check out an example here: " + data['img_url']
     return msg
 
