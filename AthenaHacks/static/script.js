@@ -15,6 +15,7 @@ function updateCount() {
     new_time = minutes.toString() + ':' + seconds.toString();
 
     if (new_time[0] == '-'){
+      sendMsg();
       startTimer();
     } else {
       countDown.innerHTML = new_time
@@ -39,4 +40,10 @@ function reset() {
     var dropDown = document.getElementById('minSelect');
     dropDown.selectedIndex = 0;
     countDown.innerHTML = "0:00";
+}
+
+function sendMsg(){
+  if (document.getElementById("sms").checked){
+    sendSMS();
+  }
 }
