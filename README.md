@@ -2,10 +2,16 @@
 With this ever drawn-out pandemic, many of us have succumbed to the long hours at our desks behind a monitor. As we are by our lonesome selves, we work and work and work; we have forgotten to take breaks to not only get a mental reprieve, but also strengthen our muscles. Yogi Break offers to be our companion in these challenging times by providing consistent reminders to try a new yoga pose that will reinforce our muscles and mind.
   
 ## What it does
-Navigate to Yogi Break and set the timer based on how often you want to get up and do a yoga pose. Are you constantly switching windows? No problem, you have the option to have the alerts go to your phone or your laptop. 
+Navigate to [Yogi Break](https://ah2022.uw.r.appspot.com/) and set the timer based on how often you want to get up and do a yoga pose. Are you constantly switching windows? No problem, you have the option to have the alerts go to your phone or your laptop. 
   
 ## Getting Started 
-TODO
+Yogi Break is available online [here](https://ah2022.uw.r.appspot.com/) but if you prefer to run it locally follow these instructions:
+1. Clone repo and navigate to YogiBreak
+2. Set the environment variable  
+      `FLASK_APP=main.py`
+3. Run the application
+      `flask run` 
+5. The output in the console will give the address to go to
 
 ## How we built it 
 - [Google Cloud](https://cloud.google.com/) was used to host our application
