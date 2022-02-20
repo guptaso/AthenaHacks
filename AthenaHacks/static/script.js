@@ -11,8 +11,15 @@ function updateCount() {
     if (seconds < 10) {
         seconds = "0" + seconds;
     }
-    countDown.innerHTML = minutes.toString() + ':' + seconds.toString();
-    time--;
+
+    new_time = minutes.toString() + ':' + seconds.toString();
+
+    if (new_time[0] == '-'){
+      startTimer();
+    } else {
+      countDown.innerHTML = new_time
+      time--;
+    }
 }
 
 //function for start button
